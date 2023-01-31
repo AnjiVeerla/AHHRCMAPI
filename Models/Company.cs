@@ -21,5 +21,6 @@ namespace RCMAPI.Models
         public string Email { get; set; }
         public int CreditDays { get; set; }
         public string LicenseNumber { get; set; }
+
     }
 }
