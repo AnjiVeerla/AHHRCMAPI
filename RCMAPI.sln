@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCMAPI", "RCMAPI.csproj", "{5B16F1AB-BFA6-4D68-90D6-B0D9E071B608}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B16F1AB-BFA6-4D68-90D6-B0D9E071B608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B16F1AB-BFA6-4D68-90D6-B0D9E071B608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B16F1AB-BFA6-4D68-90D6-B0D9E071B608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B16F1AB-BFA6-4D68-90D6-B0D9E071B608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03776C1E-B04A-41B8-99F4-3ABC7D3AE998}
+	EndGlobalSection
+EndGlobal
