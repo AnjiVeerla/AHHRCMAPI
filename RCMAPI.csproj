@@ -344,6 +344,7 @@
     <Compile Include="DAL\AuthorizationCodeCredential.cs" />
     <Compile Include="DAL\BillSummaryDAL.cs" />
     <Compile Include="DAL\ClientCredentialProvider.cs" />
+    <Compile Include="DAL\CommonMastersDAL.cs" />
     <Compile Include="DAL\RCMDAL.cs" />
     <Compile Include="DAL\TokenCredentialOptions.cs" />
     <Compile Include="Entites\SimpleSuccessResult.cs" />
@@ -352,6 +353,7 @@
     </Compile>
     <Compile Include="Messages\Utilities.cs" />
     <Compile Include="Models\BasicAuthenticationAttribute.cs" />
+    <Compile Include="Models\CommonMasters\CommonMasterModel.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\GetMasterDataList.cs" />
     <Compile Include="Models\NxGAgeCalculator.cs" />
@@ -360,7 +362,9 @@
     <Compile Include="Models\SmartSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BillSummary.cs" />
+    <Compile Include="Services\CommonMastersService.cs" />
     <Compile Include="Services\RCMService.cs" />
+    <Compile Include="SharedData\Enums.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
