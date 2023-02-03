@@ -15,12 +15,12 @@ namespace RCMAPI.Controllers
 
         [HttpPost]
         [Route("API/getpayment")]
-        public IHttpActionResult SaveCompany(Company company)
+        public IHttpActionResult SaveCompany()
         {
             try
             {
                 RCMService RCMIService = new RCMService();
-                var result = RCMIService.GetPayment(company);
+                var result = RCMIService.GetPayment();
                 return OkOrNotFound(result);
             }
             catch (SqlException ex)

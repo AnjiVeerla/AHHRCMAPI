@@ -1,7 +1,9 @@
 ﻿using RCMAPI.Models;
+using RCMAPI.Models.ContractManagement;
 using RCMAPI.Services;
 using System;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace RCMAPI.Controllers
@@ -32,13 +34,19 @@ namespace RCMAPI.Controllers
 
         [HttpPost]
         [Route("API/savecompany")]
-        public IHttpActionResult SaveCompany([FromBody] Company company)
+        public async Task<IHttpActionResult> SaveCompany(Company company)
         {
             try
             {
-                RCMService RCMIService = new RCMService();
-                var result = RCMIService.SaveCompany(company);
-                return OkOrNotFound(result);
+                ContractManagementService objContractMgmtService = new ContractManagementService();
+                var result = await  objContractMgmtService.SaveCompany(company);
+
+                var output = new
+                {
+                    status = result.Item2,
+                    companyId = result.Item1
+                };                
+                return OkOrNotFound(output);
             }
             catch (SqlException ex)
             {
@@ -58,8 +66,8 @@ namespace RCMAPI.Controllers
         {
             try
             {
-                RCMService RCMIService = new RCMService();
-                var result = RCMIService.FetchCompany(id);
+                ContractManagementService objContractMgmtService = new ContractManagementService();
+                var result = objContractMgmtService.FetchCompany(id);
                 return OkOrNotFound(result);
             }
             catch (SqlException ex)
@@ -80,8 +88,8 @@ namespace RCMAPI.Controllers
         {
             try
             {
-                RCMService RCMIService = new RCMService();
-                var result = RCMIService.FetchAllCompanies();
+                ContractManagementService objContractMgmtService = new ContractManagementService();
+                var result = objContractMgmtService.FetchAllCompanies();
                 return Ok(result);
             }
             catch (SqlException ex)
@@ -92,6 +100,28 @@ namespace RCMAPI.Controllers
             catch (Exception ex)
             {
                 SetErrorObject(objBase, ex, "Error in  FetchAllCompanyList");
+            }
+            return OkOrNotFound(objBase);
+        }
+
+        [HttpGet]
+        [Route("API/sscompanies")]
+        public IHttpActionResult FetchCompaniesSS(string value)
+        {
+            try
+            {
+                ContractManagementService objContractMgmtService = new ContractManagementService();
+                var result = objContractMgmtService.FetchCompaniesSS(value);
+                return Ok(result);
+            }
+            catch (SqlException ex)
+            {
+                objBase.Message = "SqlException";
+                SetErrorObject(objBase, ex, "SqlException");
+            }
+            catch (Exception ex)
+            {
+                SetErrorObject(objBase, ex, "Error in  FetchCompanies()");
             }
             return OkOrNotFound(objBase);
         }

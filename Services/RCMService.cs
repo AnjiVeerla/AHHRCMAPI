@@ -210,30 +210,9 @@ namespace RCMAPI.Services
             RCMDAL RCMDALObj = new RCMDAL();
             Base obj = RCMDALObj.PatientInfoByYakeenService(iqamaNumber, dateOfBirth);
             return obj;
-        }
+        }     
 
-        public int SaveCompany(Company company)
-        {
-            RCMDAL RCMDALObj = new RCMDAL();
-            int returnValue = RCMDALObj.SaveCompany(company);
-            return returnValue;
-        }
-
-        public Company FetchCompany(int id)
-        {
-            RCMDAL RCMDALObj = new RCMDAL();
-            Company returnValue = RCMDALObj.FetchCompany(id);
-            return returnValue;
-        }
-
-        public List<Company> FetchAllCompanies()
-        {
-            RCMDAL RCMDALObj = new RCMDAL();
-            List<Company> returnValue = RCMDALObj.FetchAllCompanies();
-            return returnValue;
-        }
-
-        public int GetPayment(Company company)
+        public int GetPayment()
         {          
 
             MoyasarService.ApiKey = "pk_test_WNzVNDPgy4T2Ka7U9M5zXY8bHYJe6zQiUA6vQFnQ";
