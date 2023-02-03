@@ -25,5 +25,9 @@ namespace RCMAPI.Models.ContractManagement
         public int UserID { get; set; }
         public int WorkStationID { get; set; }
         public int Blocked { get; set; }
+        public int CountryId { get; set; }
+        public string CityName { get; set; }
+        public string CountryName { get; set; }
+        public string CompanyType { get; set; }
     }
 }

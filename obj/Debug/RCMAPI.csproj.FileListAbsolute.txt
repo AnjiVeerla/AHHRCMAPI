@@ -612,3 +612,4 @@ F:\RCM-AHH\AHHRCMAPI\obj\Debug\RCMAPI.csproj.CoreCompileInputs.cache
 F:\RCM-AHH\AHHRCMAPI\obj\Debug\RCMAPI.csproj.CopyComplete
 F:\RCM-AHH\AHHRCMAPI\obj\Debug\RCMAPI.dll
 F:\RCM-AHH\AHHRCMAPI\obj\Debug\RCMAPI.pdb
+F:\RCM-AHH\AHHRCMAPI\obj\Debug\RCMAPI.csproj.AssemblyReference.cache

@@ -124,7 +124,7 @@ namespace RCMAPI.DAL
                         foreach (DataRow dr in dsCompanyList.Tables[0].Rows)
                         {
 
-                            objCompany.CompanyID = Convert.ToInt32(dr["CompanyId"].ToString());
+                            objCompany.CompanyID = Convert.ToInt32(dr["CompanyId"]);
                             objCompany.CompanyCode = Convert.ToString(dr["CompanyCode"]);
                             objCompany.CompanyName = Convert.ToString(dr["CompanyName"]);
                             objCompany.CompanyName2L = Convert.ToString(dr["CompanyName2L"]);
@@ -139,13 +139,14 @@ namespace RCMAPI.DAL
                             objCompany.Email = Convert.ToString(dr["Email"]);
                             objCompany.LicenseNo = Convert.ToString(dr["LicenseNo"]);
                             objCompany.CreditDays = Convert.ToInt32(dr["CreditDays"]);
-
                             objCompany.UserID = Convert.ToInt32(dr["UserID"]);
                             objCompany.WorkStationID = Convert.ToInt32(dr["WorkStationID"]);
                             objCompany.Blocked = Convert.ToInt32(dr["Blocked"]);
                             objCompany.CreditDays = Convert.ToInt32(dr["CreditDays"]);
-                            // objCompany.CountryId = Convert.ToInt32(dr["CountryId"].ToString());
-                            //objCompany.Country = dr["Country"].ToString();
+                            objCompany.CountryId = Convert.ToInt32(dr["CountryID"]);
+                            objCompany.CountryName = Convert.ToString(dr["CountryName"]);
+                            objCompany.CityName = Convert.ToString(dr["CityName"]);
+                            objCompany.CompanyType = Convert.ToString(dr["CompanyTypename"]);
 
 
                         }
